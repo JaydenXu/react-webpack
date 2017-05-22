@@ -1,11 +1,17 @@
 var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: path.resolve(__dirname, 'app/main.js'),
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'dist_bundle.js',
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js',
     },
-    plugins: [new HtmlWebpackPlugin()]
+    module: {
+        loaders: [
+            {
+                test: /\.jsx?$/,         // Match both .js and .jsx files
+                loader: "babel-loader",
+            }
+        ]
+    }
 };
