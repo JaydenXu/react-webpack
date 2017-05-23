@@ -12,3 +12,4 @@ node_modules/
 
 npm-debug.log
 dist/dist_bundle.js
+build/build.js

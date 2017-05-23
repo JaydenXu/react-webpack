@@ -11,6 +11,12 @@ module.exports = {
             {
                 test: /\.jsx?$/,         // Match both .js and .jsx files
                 loader: "babel-loader",
+            }, {
+                test: /\.css$/, // Only .css files  //when develop choose css or scss
+                loader: 'style-loader!css-loader' // Run both loaders
+            },{
+                test: /\.scss$/, // Only .css files
+                loader: 'style-loader!css-loader!sass-loader'
             }
         ]
     }
