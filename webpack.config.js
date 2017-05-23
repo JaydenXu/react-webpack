@@ -17,6 +17,9 @@ module.exports = {
             },{
                 test: /\.scss$/, // Only .css files
                 loader: 'style-loader!css-loader!sass-loader'
+            }, {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader?limit=25000' // 25Kb or smaller will be converted to a BASE64 string
             }
         ]
     }

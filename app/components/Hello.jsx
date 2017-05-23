@@ -8,6 +8,7 @@ export default class Hello extends Component {
     render() {
         return <div className="hello-container">
             <h1 className="hello-text hello-text-css">Hello worldadsadasdadastetetettetetete</h1>
+            <div className="image-container"></div>
         </div>
     }
 }
